@@ -1,0 +1,157 @@
+/* Mobile Responsiveness Enhancements */
+
+/* Ensure 3 colors per line on mobile */
+@media (max-width: 768px) {
+  .single-color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .palette-colors {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .palette-color {
+    flex-basis: 33.333%;
+    min-width: 33.333%;
+  }
+  
+  /* Adjust visualization container for better mobile view */
+  .visualization-container {
+    height: 150px;
+  }
+  
+  /* Make modals more mobile-friendly */
+  .modal-content {
+    width: 95%;
+    padding: 20px 15px;
+  }
+  
+  /* Adjust color values display */
+  .color-values-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Improve touch targets */
+  .nav-item, 
+  .viz-option,
+  .action-button,
+  .copy-button {
+    padding: 12px 15px;
+  }
+  
+  /* Ensure hamburger menu is easily tappable */
+  .hamburger-menu {
+    width: 60px;
+    height: 60px;
+  }
+  
+  /* Adjust sidebar width for mobile */
+  .sidebar {
+    width: 280px;
+  }
+  
+  /* Make top navigation scrollable on small screens */
+  .top-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding: 15px;
+  }
+  
+  /* Adjust home layout for mobile */
+  .home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+  }
+  
+  .home-main-area {
+    height: 250px;
+  }
+  
+  .home-right-panels {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+  }
+  
+  .right-panel {
+    height: 100px;
+  }
+  
+  .home-bottom-panel,
+  .home-corner-panel {
+    height: 150px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .single-color-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  .color-card span {
+    font-size: 0.7rem;
+  }
+  
+  .top-nav {
+    padding: 10px;
+  }
+  
+  .nav-item {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .home-main-area {
+    height: 200px;
+  }
+  
+  .right-panel {
+    height: 80px;
+  }
+  
+  .home-bottom-panel,
+  .home-corner-panel {
+    height: 120px;
+  }
+  
+  /* Ensure buttons are not too small on mobile */
+  .action-button,
+  .copy-button,
+  .variation-type {
+    min-height: 44px;
+  }
+}
+
+/* GitHub Pages Compatibility */
+/* Ensure all paths are relative */
+img, script, link {
+  /* Use relative paths for all resources */
+  /* This is already handled in our HTML structure */
+}
+
+/* Ensure no absolute paths are used in CSS */
+/* All paths in our CSS are already relative */
+
+/* Add fallbacks for modern CSS features that might not be supported in all browsers */
+.glass {
+  background: rgba(30, 30, 30, 0.6);
+  /* Fallback for browsers that don't support backdrop-filter */
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Ensure SVG compatibility */
+svg {
+  max-width: 100%;
+  height: auto;
+}
