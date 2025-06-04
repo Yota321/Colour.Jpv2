@@ -1,0 +1,115 @@
+/* Mobile-specific fixes */
+
+@media (max-width: 768px) {
+  /* Fix logo position on mobile */
+  .hamburger-menu {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 200;
+  }
+  
+  /* Ensure the logo is visible and properly shaped */
+  .star-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Make the star points more visible */
+  .star-point {
+    background-color: white;
+    width: 14px;
+    height: 14px;
+  }
+  
+  /* Adjust top navigation for mobile */
+  .top-nav {
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .nav-item {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Fix home layout for mobile */
+  .home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: auto;
+    padding-top: 60px; /* Add space for fixed navigation */
+  }
+  
+  /* Ensure content is visible */
+  .main-content {
+    padding-top: 60px;
+  }
+  
+  /* Make sure visualization modes are accessible */
+  .visualization-section {
+    padding: 15px;
+  }
+  
+  /* Fix color and palette displays */
+  .single-color-grid,
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  /* Ensure 3 colors per line on mobile */
+  .palette-colors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+  
+  /* Home page preview sections */
+  .home-preview-section {
+    margin-bottom: 15px;
+  }
+  
+  .home-main-area {
+    width: 100%;
+  }
+  
+  .home-right-panels {
+    width: 100%;
+  }
+  
+  .home-bottom-panel {
+    width: 100%;
+  }
+  
+  .color-preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* Fix sidebar on mobile */
+  .sidebar {
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  /* Fix visualization section in sidebar */
+  .visualization-section {
+    margin-top: 20px;
+  }
+  
+  .viz-option {
+    padding: 8px;
+    margin-bottom: 5px;
+  }
+  
+  .viz-option span {
+    font-size: 0.9rem;
+  }
+}
